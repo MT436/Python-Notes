@@ -1,1 +1,109 @@
-b
+# 🧩 Python 3: Functions & Modules
+
+Functions and modules help you **organize**, **reuse**, and **structure** your code in Python.
+
+---
+
+## 🔹 Defining Functions
+
+Functions are blocks of code that perform a specific task. You define a function using the `def` keyword.
+
+### ✅ Basic Syntax
+
+```python
+def function_name(parameters):
+    # code block
+    return result
+````
+
+### 🔸 Example: Function with No Parameters
+
+```python
+def greet():
+    print("Hello, world!")
+
+greet()
+```
+
+### 🔸 Example: Function with Parameters
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)  # Output: 8
+```
+
+### 🔸 Example: Function with Default Parameters
+
+```python
+def greet(name="Guest"):
+    print(f"Hello, {name}!")
+
+greet("Alice")   # Output: Hello, Alice!
+greet()          # Output: Hello, Guest!
+```
+
+### 🔸 Example: Function with Keyword Arguments
+
+```python
+def profile(name, age):
+    print(f"{name} is {age} years old.")
+
+profile(age=30, name="John")  # Order doesn't matter
+```
+
+---
+
+## 🧱 Organizing Code with Modules
+
+A **module** is a `.py` file that contains functions, variables, or classes. You can import and reuse them in other files.
+
+### 🔸 Creating a Module
+
+Create a file called `my_module.py`:
+
+```python
+# my_module.py
+
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+### 🔸 Importing and Using a Module
+
+```python
+# main.py
+
+import my_module
+
+print(my_module.greet("Alice"))
+```
+
+You can also import specific functions:
+
+```python
+from my_module import greet
+
+print(greet("Bob"))
+```
+
+---
+
+## 📌 Summary
+
+| Concept        | Description                         |
+| -------------- | ----------------------------------- |
+| `def`          | Define a function                   |
+| `return`       | Send back a result from a function  |
+| Default values | Optional parameter values           |
+| Keyword args   | Specify arguments by name           |
+| Module (`.py`) | File that groups functions and code |
+| `import`       | Use code from other modules         |
+
+---
+
+💡 Use functions to avoid repeating code and modules to make your codebase modular, reusable, and maintainable.
+
+```
